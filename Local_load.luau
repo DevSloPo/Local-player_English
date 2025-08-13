@@ -37,18 +37,18 @@
         sound2.Ended:Connect(sound2.Destroy)
         local scripts = {
         [18687417158] = "Forsaken-obfuscated.lua",
-        [915207093]   = "Ohio",
-        [12411473842] = "pressure",
-        [12552538292] = "pressure",
-        [126509999114328] = "99day",
+        [915207093]   = "Ohio-obfuscated.lua",
+        [12411473842] = "pressure-obfuscated.lua",
+        [12552538292] = "pressure-obfuscated.lua",
+        [126509999114328] = "In99day-obfuscated.lua",
         [102181577519757] = "Darkdeception",
-        [4639625707]   = "Wartycoon",
-        [13977939077]  = "Chain", 
-        [6846458508]  = "Aut",
-        [6839171747]  = "OutDoors",
-        [10118559731]  = "Nico"
+        [4639625707]   = "Wartycoon-obfuscated.lua",
+        [13977939077]  = "Chain-obfuscated.lua", 
+        [6846458508]  = "Aut-obfuscated.lua",
+        [6839171747]  = "OUTDOORSUI-obfuscated.lua",
+        [10118559731]  = "Nico-obfuscated.lua"
         }
-        local scriptName = scripts[PlaceId] or "Universalfunction"
+        local scriptName = scripts[PlaceId] or "Universalfunction-obfuscated.lua"
         wait(1)
         Notification:Notify(
         {Title = "XK Hub", Description = "Load script: "..scriptName},
