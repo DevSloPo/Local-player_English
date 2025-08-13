@@ -61,7 +61,7 @@
         sound:Play()
         sound.Ended:Connect(sound.Destroy)
         local success, err = pcall(function()
-        loadstring(game:HttpGet("https://github.com/DevSloPo/Main/raw/main/" .. scriptName))()
+        loadstring(game:HttpGet("https://github.com/DevSloPo/English_XK/raw/main/" .. scriptName))()
         end)
         if not success then
         Notification:Notify(
