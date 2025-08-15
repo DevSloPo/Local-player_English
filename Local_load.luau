@@ -37,7 +37,7 @@
         sound2.Ended:Connect(sound2.Destroy)
         local scripts = {
         [18687417158] = "Forsaken-obfuscated.lua",
-        [915207093]   = "Ohio-obfuscated.lua",
+        [7239319209]   = "Ohio-obfuscated.lua",
         [12411473842] = "pressure-obfuscated.lua",
         [12552538292] = "pressure-obfuscated.lua",
         [126509999114328] = "In99day-obfuscated.lua",
