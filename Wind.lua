@@ -6234,17 +6234,17 @@ Thickness = 4,
 ApplyStrokeMode = "Border",
 Color = Color3.new(0, 255, 0),
 },{
-b("UIGradient",{
-    Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),  
-        ColorSequenceKeypoint.new(0.16, Color3.fromRGB(255, 128, 0)), 
-        ColorSequenceKeypoint.new(0.33, Color3.fromRGB(255, 255, 0))
-        ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 0)),   
-        ColorSequenceKeypoint.new(0.66, Color3.fromRGB(0, 255, 255)),
-        ColorSequenceKeypoint.new(0.83, Color3.fromRGB(0, 0, 255)),   
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(128, 0, 255))    
-    }),
-    Rotation = 90
+b("UIGradient", {
+            Color = ColorSequence.new({
+                ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),  
+                ColorSequenceKeypoint.new(0.16, Color3.fromRGB(255, 128, 0)), 
+                ColorSequenceKeypoint.new(0.33, Color3.fromRGB(255, 255, 0)),  -- 添加逗号
+                ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 0)),   
+                ColorSequenceKeypoint.new(0.66, Color3.fromRGB(0, 255, 255)),
+                ColorSequenceKeypoint.new(0.83, Color3.fromRGB(0, 0, 255)),   
+                ColorSequenceKeypoint.new(1, Color3.fromRGB(128, 0, 255))    
+            }),
+            Rotation = 90
 })
 }),
 u,
