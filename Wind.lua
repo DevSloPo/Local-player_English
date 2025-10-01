@@ -138,7 +138,19 @@ end
 end
 
 function g.GetThemeProperty(h,i)
-return i[h]or g.Themes.Dark[h]
+    local value = i[h] or g.Themes.Dark[h]
+    
+    -- 如果是Outline属性且是数组，返回整个数组
+    if h == "Outline" and type(value) == "table" then
+        return value
+    end
+    
+    -- 如果是数组，返回第一个颜色作为默认值
+    if type(value) == "table" then
+        return value[1] or g.Themes.Dark[h]
+    end
+    
+    return value
 end
 
 function g.AddThemeObject(h,i)
@@ -148,29 +160,50 @@ return h
 end
 
 function g.UpdateTheme(h,i)
-local function ApplyTheme(j)
-for k,l in pairs(j.Properties or{})do
-local m=g.GetThemeProperty(l,g.Theme)
-if m then
-if not i then
-j.Object[k]=Color3.fromHex(m)
-else
-g.Tween(j.Object,0.08,{[k]=Color3.fromHex(m)}):Play()
-end
-end
-end
-end
+    -- 创建颜色索引计数器
+    local colorIndex = 0
+    
+    local function ApplyTheme(j)
+        for k,l in pairs(j.Properties or{})do
+            local m = g.GetThemeProperty(l, g.Theme)
+            if m then
+                -- 特殊处理Outline颜色数组
+                if l == "Outline" and type(m) == "table" then
+                    colorIndex = colorIndex + 1
+                    if colorIndex > #m then
+                        colorIndex = 1
+                    end
+                    
+                    local selectedColor = m[colorIndex]
+                    if selectedColor then
+                        if not i then
+                            j.Object[k] = Color3.fromHex(selectedColor)
+                        else
+                            g.Tween(j.Object, 0.08, {[k] = Color3.fromHex(selectedColor)}):Play()
+                        end
+                    end
+                else
+                    -- 正常的单色处理
+                    if not i then
+                        j.Object[k] = Color3.fromHex(m)
+                    else
+                        g.Tween(j.Object, 0.08, {[k] = Color3.fromHex(m)}):Play()
+                    end
+                end
+            end
+        end
+    end
 
-if h then
-local j=g.Objects[h]
-if j then
-ApplyTheme(j)
-end
-else
-for j,k in pairs(g.Objects)do
-ApplyTheme(k)
-end
-end
+    if h then
+        local j = g.Objects[h]
+        if j then
+            ApplyTheme(j)
+        end
+    else
+        for j,k in pairs(g.Objects)do
+            ApplyTheme(k)
+        end
+    end
 end
 
 function g.Icon(h)
