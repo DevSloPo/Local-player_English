@@ -6230,34 +6230,9 @@ Active=true,
 },{
 
 b("UIStroke",{
-    Thickness = 12,
-    ApplyStrokeMode = "Border",
-    Color = Color3.fromRGB(238, 130, 238), 
-}),
-b("UIStroke",{
-    Thickness = 10,
-    ApplyStrokeMode = "Border",
-    Color = Color3.fromRGB(75, 0, 130), -- 靛色
-}),
-b("UIStroke",{
-    Thickness = 8,
-    ApplyStrokeMode = "Border",
-    Color = Color3.fromRGB(0, 0, 255), -- 蓝色
-}),
-b("UIStroke",{
-    Thickness = 6,
-    ApplyStrokeMode = "Border",
-    Color = Color3.fromRGB(0, 255, 0), -- 绿色
-}),
-b("UIStroke",{
     Thickness = 4,
     ApplyStrokeMode = "Border",
-    Color = Color3.fromRGB(255, 255, 0), -- 黄色
-}),
-b("UIStroke",{
-    Thickness = 2,
-    ApplyStrokeMode = "Border",
-    Color = Color3.fromRGB(255, 165, 0), -- 橙色
+    Color = Color3.fromRGB(0, 255, 255), 
 }),
 
 u,
