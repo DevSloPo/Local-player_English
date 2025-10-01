@@ -6229,24 +6229,35 @@ AnchorPoint=Vector2.new(0.5,0.5),
 Active=true,
 },{
 
--- 彩虹边框解决方案
-b("UIGradient",{
-Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),    -- 红
-    ColorSequenceKeypoint.new(0.16, Color3.fromRGB(255, 165, 0)), -- 橙
-    ColorSequenceKeypoint.new(0.33, Color3.fromRGB(255, 255, 0)), -- 黄
-    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 0)),    -- 绿
-    ColorSequenceKeypoint.new(0.66, Color3.fromRGB(0, 0, 255)),   -- 蓝
-    ColorSequenceKeypoint.new(0.83, Color3.fromRGB(75, 0, 130)),  -- 靛
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(238, 130, 238))   -- 紫
-}),
-Rotation = 90,
-}),
-
 b("UIStroke",{
-Thickness = 4,
-ApplyStrokeMode = "Border",
-Color = Color3.new(1, 1, 1), 
+    Thickness = 12,
+    ApplyStrokeMode = "Border",
+    Color = Color3.fromRGB(238, 130, 238), 
+}),
+b("UIStroke",{
+    Thickness = 10,
+    ApplyStrokeMode = "Border",
+    Color = Color3.fromRGB(75, 0, 130), -- 靛色
+}),
+b("UIStroke",{
+    Thickness = 8,
+    ApplyStrokeMode = "Border",
+    Color = Color3.fromRGB(0, 0, 255), -- 蓝色
+}),
+b("UIStroke",{
+    Thickness = 6,
+    ApplyStrokeMode = "Border",
+    Color = Color3.fromRGB(0, 255, 0), -- 绿色
+}),
+b("UIStroke",{
+    Thickness = 4,
+    ApplyStrokeMode = "Border",
+    Color = Color3.fromRGB(255, 255, 0), -- 黄色
+}),
+b("UIStroke",{
+    Thickness = 2,
+    ApplyStrokeMode = "Border",
+    Color = Color3.fromRGB(255, 165, 0), -- 橙色
 }),
 
 u,
