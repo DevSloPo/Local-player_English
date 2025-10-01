@@ -5986,9 +5986,9 @@ b("UICorner",{
 CornerRadius=UDim.new(1,0)
 }),
 b("UIStroke",{
-Thickness=1,
+Thickness=3,  
 ApplyStrokeMode="Border",
-Color=Color3.new(1,1,1),
+Color=Color3.new(1,0,0), 
 Transparency=0,
 },{
 b("UIGradient",{
