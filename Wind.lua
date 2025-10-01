@@ -5988,7 +5988,7 @@ CornerRadius=UDim.new(1,0)
 b("UIStroke",{
 Thickness=3,  
 ApplyStrokeMode="Border",
-Color=Color3.new(1,0,0), 
+Color=Color3.new(1,1,1), 
 Transparency=0,
 },{
 b("UIGradient",{
@@ -6228,6 +6228,25 @@ Parent=n.Parent,
 AnchorPoint=Vector2.new(0.5,0.5),
 Active=true,
 },{
+-- 彩虹边框
+b("UIStroke",{
+Thickness = 4,
+ApplyStrokeMode = "Border",
+Color = Color3.new(1, 0, 0),
+},{
+    b("UIGradient",{
+        Color = ColorSequence.new({
+            ColorSequenceKeypoint.new(0, Color3.new(1, 0, 0)),     -- 红
+            ColorSequenceKeypoint.new(0.16, Color3.new(1, 0.5, 0)), -- 橙
+            ColorSequenceKeypoint.new(0.33, Color3.new(1, 1, 0)),   -- 黄
+            ColorSequenceKeypoint.new(0.5, Color3.new(0, 1, 0)),    -- 绿
+            ColorSequenceKeypoint.new(0.66, Color3.new(0, 1, 1)),   -- 青
+            ColorSequenceKeypoint.new(0.83, Color3.new(0, 0, 1)),   -- 蓝
+            ColorSequenceKeypoint.new(1, Color3.new(0.5, 0, 1))     -- 紫
+        }),
+        Rotation = 90
+    })
+}),
 u,
 ac.NewRoundFrame(o.UICorner,"Squircle",{
 ImageTransparency=1,
@@ -6238,7 +6257,6 @@ Name="Background",
 ThemeTag={
 ImageColor3="Background"
 },
-
 },{
 b("ImageLabel",{
 BackgroundTransparency=1,
@@ -6253,11 +6271,7 @@ CornerRadius=UDim.new(0,o.UICorner)
 }),
 D,
 q,
-
-
-
 }),
-UIStroke,
 p,
 r,
 s,
@@ -6265,7 +6279,6 @@ b("Frame",{
 Size=UDim2.new(1,0,1,0),
 BackgroundTransparency=1,
 Name="Main",
-
 Visible=false,
 ZIndex=97,
 },{
