@@ -6230,20 +6230,21 @@ Active=true,
 },{
 
 b("UIStroke",{
-Thickness = 4,
-ApplyStrokeMode = "Border",
+    Thickness = 4,
+    ApplyStrokeMode = "Border"
 },{
-b("UIGradient", {
-    Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),  
-        ColorSequenceKeypoint.new(0.16, Color3.fromRGB(255, 128, 0)), 
-        ColorSequenceKeypoint.new(0.33, Color3.fromRGB(255, 255, 0)), 
-        ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 0)),   
-        ColorSequenceKeypoint.new(0.66, Color3.fromRGB(0, 255, 255)),
-        ColorSequenceKeypoint.new(0.83, Color3.fromRGB(0, 0, 255)),   
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(128, 0, 255))    
-    }),
-    Rotation = 90
+    b("UIGradient",{
+        Color = ColorSequence.new{
+            ColorSequenceKeypoint.new(0, Color3.new(255, 0, 0)),     -- 红
+            ColorSequenceKeypoint.new(0.16, Color3.new(255, 128, 0)), -- 橙
+            ColorSequenceKeypoint.new(0.33, Color3.new(255, 255, 0)), -- 黄
+            ColorSequenceKeypoint.new(0.5, Color3.new(0, 255, 0)),    -- 绿
+            ColorSequenceKeypoint.new(0.66, Color3.new(0, 255, 255)), -- 青
+            ColorSequenceKeypoint.new(0.83, Color3.new(0, 0, 255)),   -- 蓝
+            ColorSequenceKeypoint.new(1, Color3.new(128, 0, 255))     -- 紫
+        },
+        Rotation = 0
+    })
 })
 }),
 u,
