@@ -6233,11 +6233,11 @@ b("UIStroke",{
 Thickness = 4,
 ApplyStrokeMode = "Border",
 },{
-b("UIGradient",{
+b("UIGradient", {
     Color = ColorSequence.new({
         ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),  
         ColorSequenceKeypoint.new(0.16, Color3.fromRGB(255, 128, 0)), 
-        ColorSequenceKeypoint.new(0.33, Color3.fromRGB(255, 255, 0)),
+        ColorSequenceKeypoint.new(0.33, Color3.fromRGB(255, 255, 0)), 
         ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 0)),   
         ColorSequenceKeypoint.new(0.66, Color3.fromRGB(0, 255, 255)),
         ColorSequenceKeypoint.new(0.83, Color3.fromRGB(0, 0, 255)),   
