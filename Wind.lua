@@ -6228,6 +6228,25 @@ Parent=n.Parent,
 AnchorPoint=Vector2.new(0.5,0.5),
 Active=true,
 },{
+
+b("UIStroke",{
+Thickness = 4,
+ApplyStrokeMode = "Border",
+Color = Color3.new(0, 255, 0),
+},{
+b("UIGradient",{
+    Color = ColorSequence.new({
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),  
+        ColorSequenceKeypoint.new(0.16, Color3.fromRGB(255, 128, 0)), 
+        ColorSequenceKeypoint.new(0.33, Color3.fromRGB(255, 255, 0))
+        ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 0)),   
+        ColorSequenceKeypoint.new(0.66, Color3.fromRGB(0, 255, 255)),
+        ColorSequenceKeypoint.new(0.83, Color3.fromRGB(0, 0, 255)),   
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(128, 0, 255))    
+    }),
+    Rotation = 90
+})
+}),
 u,
 ac.NewRoundFrame(o.UICorner,"Squircle",{
 ImageTransparency=1,
@@ -6239,26 +6258,6 @@ ThemeTag={
 ImageColor3="Background"
 },
 },{
-
-b("UIStroke",{
-Thickness = 4,
-ApplyStrokeMode = "Border",
-Color = Color3.new(1, 0, 0),
-},{
-    b("UIGradient",{
-        Color = ColorSequence.new({
-            ColorSequenceKeypoint.new(0, Color3.new(1, 0, 0)),   
-            ColorSequenceKeypoint.new(0.16, Color3.new(1, 0.5, 0)),
-            ColorSequenceKeypoint.new(0.33, Color3.new(1, 1, 0)), 
-            ColorSequenceKeypoint.new(0.5, Color3.new(0, 1, 0)),    
-            ColorSequenceKeypoint.new(0.66, Color3.new(0, 1, 1)),  
-            ColorSequenceKeypoint.new(0.83, Color3.new(0, 0, 1)),   
-            ColorSequenceKeypoint.new(1, Color3.new(0.5, 0, 1))    
-        }),
-        Rotation = 90
-    })
-}),
--- ▲▲▲ 彩虹边框 ▲▲▲
 b("ImageLabel",{
 BackgroundTransparency=1,
 Size=UDim2.new(1,0,1,0),
